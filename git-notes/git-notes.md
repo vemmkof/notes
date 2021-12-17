@@ -29,43 +29,50 @@
 
 ## states
 1.  Working directory
-    - > `git add <FILENAME_OR_DIRECTORY>`
+    * > `git add <FILENAME_OR_DIRECTORY>`
 2.  Staging area
-    - > `git commit -m "message"`
+    * > `git commit -m "message"`
 3.  '.git' directory (repository)
-    - > `git push origin <BRANCH>`  
+    * > `git push origin <BRANCH>`  
+* In each state you can use the following commands to see:
+  - Working tree status
+    * > `git status`
+    * > `git status <PATH>`
+  - Commit logs
+    * > `git log`
+
 
 ## init
 > `git init <PATH>`
 
 
 ## remote
-1.  Display remote repositories
-    - > `git remote -v`
-2.  Add remote repository
-    - > `git remote add origin  <REMOTE_URL>`
+*  Display remote repositories
+    * > `git remote -v`
+*  Add remote repository
+    * > `git remote add origin  <REMOTE_URL>`
 
 
 ## branches 
-1.  Display branches
+*  Display branches
     -  > `git branch -a`
-2.  Create branch
+*  Create branch
     -  > `git checkout -b <BRANCH>`
-3.  Change branch
+*  Change branch
     -  > `git checkout <BRANCH>`
-4.  Delete branch
+*  Delete branch
     -  > `git branch -d <BRANCH>`
-5.  Delete branch (force)
+*  Delete branch (force)
     -  > `git branch -D <BRANCH>`
 
 ## merge
 > `git merge <BRANCH>`
 
 ## update remote repository
-1. Download objects and refs from remote repository
-   - > `git fetch`
-2. Integrate with another repository or a local branch
-   - > `git pull origin <BRANCH>`
+* Download objects and refs from remote repository
+   * > `git fetch`
+* Integrate with another repository or a local branch
+   * > `git pull origin <BRANCH>`
 
 ## tags
 
@@ -81,3 +88,37 @@
   * > `git tag -d v1.0`
 * Push tag
   *  > `git push origin v1.0`
+
+## logging
+* One line
+  * > `git log --oneline`
+* Changes listed
+  * > `git log -p`
+* Specific file
+  * > `git log -- <PATH_TO_FILE>`
+* Specific author
+  * > `git log --author="<USERNAME>"`
+* Specific keyword in commit message
+  * > `git log --grep="<KEYWORD>"`
+* Specific keyword in commit message (ignore case)
+  * > `git log -i --grep="<KeYwOrD>"`
+* Graphic log
+  * > `git log --graph`
+
+## cloning repos
+* local
+  * > `git clone <PATH>`
+* remote
+  * > `git clone <REMOTE_URL>`
+* dadas
+  * > `git log --graph`
+
+
+## ignoring
+* Configure global file 
+  * `git config --global core.excludefile '<PATH_TO_FILE>'`
+    * > `git config --global core.excludefile '/etc/gitignore'`
+
+* Local file
+  * > `touch .gitignore`
+
